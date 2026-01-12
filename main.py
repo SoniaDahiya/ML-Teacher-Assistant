@@ -1,7 +1,7 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.messages import HumanMessage, SystemMessage
-import os
-os.environ["GOOGLE_API_KEY"] = "AIzaSyCbzEKuQYB3nVmoyru7tzP0m2-iU1Pea4c"
+import streamlit as st
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]   
 
 
 model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
